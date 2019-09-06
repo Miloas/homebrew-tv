@@ -1,8 +1,8 @@
 class Tv < Formula
   desc "Tag version cli"
   homepage "https://github.com/Miloas/tv"
-  url "https://github.com/Miloas/tv/releases/download/1.0.9/tv_darwin_amd64"
-  version "1.0.9"
+  url "https://github.com/Miloas/tv/releases/download/1.0.10/tv_darwin_amd64"
+  version "1.0.10"
 
   def install
     nm = "tv"
