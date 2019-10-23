@@ -8,3 +8,9 @@ Homebrew repository to install the tv command line utility
 brew tap Miloas/tv
 brew install tv
 ```
+
+or 
+
+```sh
+brew install Miloas/tap/tv
+```
