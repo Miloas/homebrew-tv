@@ -7,11 +7,11 @@ class Tv < Formula
 
   if OS.mac?
     url "https://github.com/Miloas/tv/releases/download/1.1.1/tv_Darwin_x86_64.tar.gz"
-    sha256 "9581fda07e440200653d320aa72679c95a5a392be5e2984c24fbf41214646c1b"
+    sha256 "20082eb2754bd41770fb36537764b7bd8e1cd4c60739911373a8a822ef26d008"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/Miloas/tv/releases/download/1.1.1/tv_Linux_x86_64.tar.gz"
-      sha256 "1e856eb88a2bfa7b7cefd9006246b61b8a74bf73d6019e4ac175f5fd54fc0f1d"
+      sha256 "e218eb403530b169716d68a0b425f6e6705e9fde7bc4779e609c340b831b9395"
     end
   end
 
