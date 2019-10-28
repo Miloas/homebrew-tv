@@ -2,16 +2,16 @@
 class Tv < Formula
   desc "tag version cli"
   homepage "https://github.com/Miloas/tv"
-  version "1.1.1"
+  version "1.1.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/Miloas/tv/releases/download/1.1.1/tv_Darwin_x86_64.tar.gz"
-    sha256 "20082eb2754bd41770fb36537764b7bd8e1cd4c60739911373a8a822ef26d008"
+    url "https://github.com/Miloas/tv/releases/download/1.1.2/tv_Darwin_x86_64.tar.gz"
+    sha256 "9a7363a79d7b4f2c7f082f2bb8820f9c10b2334a867b1c8538f103e82ec2737e"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/Miloas/tv/releases/download/1.1.1/tv_Linux_x86_64.tar.gz"
-      sha256 "e218eb403530b169716d68a0b425f6e6705e9fde7bc4779e609c340b831b9395"
+      url "https://github.com/Miloas/tv/releases/download/1.1.2/tv_Linux_x86_64.tar.gz"
+      sha256 "df0866ac4c982e4101504050d6237ec92835d92ca0d96fcd13823e41695a1201"
     end
   end
 
