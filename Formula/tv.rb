@@ -17,8 +17,4 @@ class Tv < Formula
   def install
     bin.install "tv"
   end
-
-  test do
-    system "#{bin}/tv help"
-  end
 end
