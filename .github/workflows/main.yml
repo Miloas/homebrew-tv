@@ -19,4 +19,3 @@ jobs:
         brew update >/dev/null
         brew audit ./Formula/*.rb
         brew install -v ./Formula/*.rb
-        brew test ./Formula/*.rb
