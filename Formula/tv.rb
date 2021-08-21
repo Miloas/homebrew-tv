@@ -5,20 +5,28 @@
 class Tv < Formula
   desc "Tag version cli"
   homepage "https://github.com/Miloas/tv"
-  version "1.3.5"
+  version "1.3.6"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Miloas/tv/releases/download/1.3.5/tv_Darwin_x86_64.tar.gz"
-      sha256 "0c8280efcbd87221fa4422f3228ddd74fa821823b856712f28bc5546a24f902e"
+      url "https://github.com/Miloas/tv/releases/download/1.3.6/tv_darwin_x86_64.tar.gz"
+      sha256 "6ba4189d3d833e32fc08e823167fa20708224e97934085d83c0ea3f39cad9287"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/Miloas/tv/releases/download/1.3.6/tv_darwin_arm64.tar.gz"
+      sha256 "2d09956163c99d459bb5acc28b97ae99e29853461aa2853683c033193851b1b4"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Miloas/tv/releases/download/1.3.5/tv_Linux_x86_64.tar.gz"
-      sha256 "8896580aceb1d9c4e4d2229bc2214b8e842e9e78664f3250adf120d8c7186bf6"
+      url "https://github.com/Miloas/tv/releases/download/1.3.6/tv_linux_x86_64.tar.gz"
+      sha256 "fb42c774f9ec6a3ba12b122801ac6e0dc662c34915fdad384bd03c1f5e20a644"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Miloas/tv/releases/download/1.3.6/tv_linux_arm64.tar.gz"
+      sha256 "81e8e8ad3a91713ed36b05e92e25f3a35fcfcb2271a20126e637003ce3310158"
     end
   end
 
