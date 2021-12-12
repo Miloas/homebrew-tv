@@ -5,33 +5,44 @@
 class Tv < Formula
   desc "Tag version cli"
   homepage "https://github.com/Miloas/tv"
-  version "1.3.6"
-  bottle :unneeded
+  version "1.3.7"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/Miloas/tv/releases/download/1.3.6/tv_darwin_x86_64.tar.gz"
-      sha256 "6ba4189d3d833e32fc08e823167fa20708224e97934085d83c0ea3f39cad9287"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/Miloas/tv/releases/download/1.3.6/tv_darwin_arm64.tar.gz"
-      sha256 "2d09956163c99d459bb5acc28b97ae99e29853461aa2853683c033193851b1b4"
+      url "https://github.com/Miloas/tv/releases/download/1.3.7/tv_darwin_arm64.tar.gz"
+      sha256 "3431f363d8ea4de4895ce3500e6b3cb19da59f722dfdf35beadcf434bebe73b2"
+
+      def install
+        bin.install "tv"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/Miloas/tv/releases/download/1.3.7/tv_darwin_x86_64.tar.gz"
+      sha256 "e90f349cd4ff024e85e636880d64c101aa0dee6780d1721ed9e52da69e081023"
+
+      def install
+        bin.install "tv"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/Miloas/tv/releases/download/1.3.6/tv_linux_x86_64.tar.gz"
-      sha256 "fb42c774f9ec6a3ba12b122801ac6e0dc662c34915fdad384bd03c1f5e20a644"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Miloas/tv/releases/download/1.3.6/tv_linux_arm64.tar.gz"
-      sha256 "81e8e8ad3a91713ed36b05e92e25f3a35fcfcb2271a20126e637003ce3310158"
-    end
-  end
+      url "https://github.com/Miloas/tv/releases/download/1.3.7/tv_linux_arm64.tar.gz"
+      sha256 "fd6bdcca90935b1ba60d07e114617d44e2cf52b34c1140c8739706424ace6688"
 
-  def install
-    bin.install "tv"
+      def install
+        bin.install "tv"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/Miloas/tv/releases/download/1.3.7/tv_linux_x86_64.tar.gz"
+      sha256 "b4cf8ad6b3b0bdf2cf380e51b5a714d3c8aa13289bfdc8dab0f247593fc57384"
+
+      def install
+        bin.install "tv"
+      end
+    end
   end
 
   test do
