@@ -5,20 +5,20 @@
 class Tv < Formula
   desc "Tag version cli"
   homepage "https://github.com/Miloas/tv"
-  version "1.3.8"
+  version "1.4.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Miloas/tv/releases/download/1.3.8/tv_darwin_arm64.tar.gz"
-      sha256 "cd288eff3c3d801063263516967e56c153c8eec0804713e2d2d155f20de30c27"
+      url "https://github.com/Miloas/tv/releases/download/1.4.0/tv_Darwin_arm64.tar.gz"
+      sha256 "a4d1af901d404f96d2b5a80d084c8c1b28a83a9a543947ab93e1e659c21a85e5"
 
       def install
         bin.install "tv"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Miloas/tv/releases/download/1.3.8/tv_darwin_x86_64.tar.gz"
-      sha256 "a262a5366f0293a654612e827120ce4a029633234d7e2b16bc420ff968fffd0b"
+      url "https://github.com/Miloas/tv/releases/download/1.4.0/tv_Darwin_x86_64.tar.gz"
+      sha256 "cdc29e647544adb928b6dda908e8bded3f6ec1fce2bc6a98983c97ce96022b1e"
 
       def install
         bin.install "tv"
@@ -28,16 +28,16 @@ class Tv < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Miloas/tv/releases/download/1.3.8/tv_linux_arm64.tar.gz"
-      sha256 "fa4919a9cb4c3e991367c03173c1c8d8f63027752f79816d24d9478c59f98bbd"
+      url "https://github.com/Miloas/tv/releases/download/1.4.0/tv_Linux_arm64.tar.gz"
+      sha256 "07b0ebbf1376d95b04dce762f68608663f189d3e88238e304980dc68d7b65f2b"
 
       def install
         bin.install "tv"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Miloas/tv/releases/download/1.3.8/tv_linux_x86_64.tar.gz"
-      sha256 "a8ea799b3f7f4995f80b74f6b185cafe99e4911baa18a3ec385632ec1787cf2d"
+      url "https://github.com/Miloas/tv/releases/download/1.4.0/tv_Linux_x86_64.tar.gz"
+      sha256 "f4d9e2f68acc89944bb4736d791ed30f5e033bb64ab35a0b624f5be48841fd36"
 
       def install
         bin.install "tv"
