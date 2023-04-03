@@ -5,17 +5,18 @@ on: [push]
 jobs:
   build:
 
-    runs-on: macOS-11
+    runs-on: macOS-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Ruby 2.6
-      uses: actions/setup-ruby@v1
+    - uses: actions/checkout@v3
+    - run: brew update
+    - run: brew audit --formulae Formula/*.rb
+    - run: brew install --formulae Formula/*.rb
+    - uses: actions/upload-artifact@v3
+      if: failure()
       with:
-        ruby-version: 2.6.x
-    - name: Build and test
-      run: |
-        curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh
-        brew update >/dev/null
-        brew audit ./Formula/*.rb
-        brew install -v ./Formula/*.rb
+        path: |
+          ~/Library/Logs/Homebrew/xcnew/
+          ~/Library/Logs/Homebrew/class-dump/
+    - run: brew test Formula/*.rb
+    - run: brew uninstall --formulae Formula/*.rb
